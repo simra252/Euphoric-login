@@ -1,0 +1,259 @@
+/*navbar*/
+
+
+.nn {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color:white;
+    margin: 0 12px 0 12px;
+    
+}
+
+
+.left{
+    display: inline-block;
+    position: absolute;
+    left: 34px;
+    top: 5px;
+    padding-top: 3px;
+    padding-left: 5px;
+    width:120px;
+    height: 40px;
+    animation: leftSideAni 2s ease forwards;
+
+}
+
+
+.mid{
+    display: block;
+    width: 50%;
+    margin: 12px auto;
+    animation: navani 2s ease forwards;
+    animation-delay: calc(.15s * var(--navAni));  
+}
+
+
+.right{
+    animation: navani 2s ease forwards;
+    animation-delay: calc(.15s * var(--navAni));
+    display: inline-block;
+    position: absolute;
+    right: 34px;
+    top:3px;
+    
+}
+
+.navbarr{
+    display: inline-block;
+}
+
+.navbarr li{
+    display: inline-block;
+    font-size: 20px;
+}
+
+.navbarr li a{
+    text-decoration: none;
+    padding: 34px 23px;
+
+}
+
+.black-color{
+    color: black;
+}
+
+.navbarr li a:hover, .active{
+    text-decoration: underline;
+    color: #ff44cb;
+}
+
+.btn-menu{
+    display: none;
+}
+
+/* login signup butons */
+
+.black-btn{
+    color: white;
+    background: black;
+    border: none;
+    width: 90px;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+.black-btn:hover{
+    background: rgb(65, 64, 64);
+}
+
+.purple-btn{
+    margin-left: 5px;
+    color: white;
+    background: #ff44cb;
+    border: none;
+    width: 90px;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+.purple-btn:hover{
+    background:  #ca37a0;
+}
+
+
+
+/* home page */
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.vendorbox {
+    margin: 10px;
+    padding: 10px;
+    height: 170px;
+    width: 170px;
+    border: 1px solid gray;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.vendorbox:hover {
+    background: rgb(7, 7, 7);
+}
+
+.vendorbox p {
+    color: grey;
+}
+
+.vendorimg {
+    width: 60px;
+    height: 60px;
+    margin-top: 29px;
+    margin-bottom: 4px;
+}
+
+
+.movingup{
+    animation: navani 2s ease forwards;
+    animation-delay: calc(.15s * var(--navAni)); 
+}
+
+/* cities */
+
+.cities{
+    margin: 20px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.cities:hover{
+    color: #ff44cb;
+    text-decoration: underline;
+}
+
+#cities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+/*Animations*/
+@keyframes navani {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes leftSideAni {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+
+
+/*Media Query*/
+/*Navbar*/
+@media (max-width: 1260px) {
+    .mid{
+        width: 50%;
+    }
+  }
+
+  @media (max-width: 1330px) {
+    .mid{
+        width: 52%;
+    }
+  }
+
+@media (max-width: 1090px) {
+    .navbarr {
+        display: none;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbarr.active {
+        display: block;
+    }
+
+    .navbarr li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .navbarr li a {
+        padding: 10px;
+    }
+
+    .btn-menu {
+        display: block;
+        position: absolute;
+        top: 48px;
+        right: 20px;
+        font-size: 24px;
+        color: black;
+        background-color: white; /* Add white background color */
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+}
